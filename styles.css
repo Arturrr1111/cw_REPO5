@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    padding: 20px;
+}
+
+.container {
+    width: 992px;
+    margin: 0 auto;
+    background: #eee;
+    padding: 10px;
+}
+
+/* Сітка блоків */
+.header,
+.section,
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.box {
+    height: 80px;
+}
+
+/* Кольори */
+.red    { background: red; flex: 1 1 48%; }
+.green  { background: limegreen; flex: 1 1 30%; }
+.cyan   { background: cyan; flex: 1 1 48%; }
+.pink   { background: hotpink; flex: 1 1 18%; }
+.gray   { background: #ccc; justify-content: center; align-items: center; padding: 20px; }
+
+/* Медійний запит для екранів <= 768px */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .header,
+    .section,
+    .footer {
+        flex-direction: column;
+    }
+
+    .box {
+        flex: 1 1 100%;
+    }
+}
